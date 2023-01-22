@@ -1,0 +1,195 @@
+*{
+    margin: 0 0 0 0;
+    overflow-x: hidden;
+}
+header{
+    background-color: #2445a6;
+    height: 7vh;
+}
+header h1{
+    color: white;
+    margin-top: 0%;
+    margin-left: 45%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.bar1{
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin-left: 10px;
+    transition: 0.4s;
+    border-radius: 10px;
+  }
+ .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin-top: 7px;
+    margin-left: 10px ;
+    border-radius: 10px;
+    transition: 0.4s;
+  }
+
+  .change .bar1 {
+    transform: translate(0, 12px) rotate(-45deg);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    transform: translate(0, -12px) rotate(45deg);
+  }
+
+.soc{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+.dragger{
+    height: 120%;
+    width: 0.7%;
+    float: left;
+    background-color: #2445a6;
+}
+.table_container{
+    width: 75vw;
+    height: 93%;
+    float: left;
+}
+.soc_container{
+    width: 24.3%;
+    height: 93%;
+    float: right;
+}
+
+
+.container{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    overflow-y: hidden;
+}
+
+.table{
+    display: grid;
+    grid-template-columns: 100px, auto;
+    grid-template-rows: 150px, auto;
+}
+.headers{
+    text-align: center;
+    font-size: 25px;
+    padding-left: 100px;
+    display: grid;
+    font-family: 'Poppins', sans-serif;
+    grid-template-columns: repeat(5,20%);
+
+}
+.times_container{
+    padding-top: 30px;
+    padding-left: 0;
+    font-size: 20px;
+    height: 84vh;
+    font-family: 'Poppins', sans-serif;
+    display: grid;
+    justify-content: left;
+    grid-template-rows: repeat(14, 15%);
+
+}
+
+
+hr{
+    width: 100vw;
+}
+.list_container{
+    height: 93vh;
+    width: 100vw;
+    display: none;
+    overflow-y: hidden;
+}
+.list{
+    text-align: center;
+    margin-top: 30vh;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.menu_container{
+    width: 50px;
+    float: left;
+    margin-top: 10px;
+}
+.list_transition{
+    animation-name: list-animation;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    opacity: 1;
+    display: block;
+}
+.list_link{
+    font-size: 50px;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color:#2445a6;
+    background-color: white;
+    border: 0;
+    
+}
+.list_link:hover{
+    color: black;
+}
+
+.registered_container{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    justify-content: center;
+    display: none;
+    opacity: 0;
+}
+
+.registered{
+    font-family: 'Poppins', sans-serif;
+    font-size: 35px;
+    margin-top: 45vh;
+    
+}
+.registered_transition{
+    animation-name: registered;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    display: flex;
+    z-index: 2;
+}
+
+
+
+
+@keyframes list-animation {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes registered {
+    0%{
+        opacity: 0;
+    }
+
+    25%{
+        opacity: 1;
+    }
+
+    75%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}
